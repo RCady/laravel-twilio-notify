@@ -2,14 +2,14 @@
 
 namespace Rcady\Notify;
 
-use NotificationChannels\Twilio;
+use NotificationChannels\Twilio\Twilio;
 use NotificationChannels\TwilioMessage;
 
 class Notify extends Twilio
 {
-    public function sendMessage(TwilioMessage $message, $to)
+    public function sendMessage(TwilioMessage $message, $to, $useAlphanumericSender = false)
     {
-        if ($message instanceof TwilioMessage) {
+        // if ($message instanceof TwilioMessage) {
             $params = [
                 'identity' => $to,
                 'body' => trim($message->content),
@@ -18,8 +18,8 @@ class Notify extends Twilio
             return $this->twilioService
                 ->notify->services(config('services.notify_service_id'))
                 ->notifications->create($params);
-        }
+        // }
 
-        throw CouldNotSendNotification::invalidMessageObject($message);
+        // throw CouldNotSendNotification::invalidMessageObject($message);
     }
 }

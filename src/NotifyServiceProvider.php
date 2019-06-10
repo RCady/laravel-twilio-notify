@@ -16,7 +16,7 @@ class NotifyServiceProvider extends ServiceProvider
         $this->app->when(NotifyChannel::class)
             ->needs(Notify::class)
             ->give(function () {
-                return new Twilio(
+                return new Notify(
                     $this->app->make(TwilioService::class),
                     $this->app->make(TwilioConfig::class)
                 );
