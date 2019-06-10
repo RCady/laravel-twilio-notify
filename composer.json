@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Rcady\\Notify": "src/"
+            "Rcady\\Notify\\": "src/"
         }
     },
     "autoload-dev": {
