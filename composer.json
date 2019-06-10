@@ -26,12 +26,12 @@
             "Rcady\\Notify\\Tests\\": "tests/"
         }
     },
+    "prefer-stable": true,
     "extra": {
         "laravel": {
             "providers": [
                 "Rcady\\Notify\\NotifyServiceProvider"
             ]
         }
-    },
-    "prefer-stable": true
+    }
 }
