@@ -1,0 +1,36 @@
+{
+    "name": "rcady/laravel-twilio-notify",
+    "description": "Twilio Notify notification channel for Laravel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ryan Cady",
+            "email": "ryan@cadymade.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.4",
+        "illuminate/notifications": "^5.3",
+        "illuminate/support": "^5.1|^5.2|^5.3",
+        "twilio/sdk": "^5.32"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rcady\\Notify": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Rcady\\Notify\\": "src/",
+            "Rcady\\Notify\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Rcady\\Notify\\ServiceProvider"
+            ]
+        }
+    },
+    "prefer-stable": true
+}
