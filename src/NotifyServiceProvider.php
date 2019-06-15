@@ -2,7 +2,7 @@
 
 namespace Rcady\Notify;
 
-use NotificationChannels\TwilioConfig;
+use NotificationChannels\Twilio\TwilioConfig;
 use Illuminate\Support\ServiceProvider;
 use Twilio\Rest\Client as TwilioService;
 
